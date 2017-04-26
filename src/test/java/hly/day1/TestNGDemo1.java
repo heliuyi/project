@@ -1,6 +1,7 @@
 package hly.day1;
 
 import org.apache.http.impl.client.SystemDefaultCredentialsProvider;
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 /**
@@ -14,20 +15,25 @@ public class TestNGDemo1 {
 
     @BeforeTest
     public void beforceTest01(){
+
         System.out.print("這是一个BeforceTest注解！");
     }
     @BeforeMethod
     public void beforeMethod(){
+
         System.out.print("這是一个BeforeMethod注解！");
     }
      @Test
     public void testCase1(){
-         System.out.print("這是@test的一个注解，case1！");
+
+        System.out.print("這是@test的一个注解，case1！");
      }
 
      @Test
     public void testCase2(){
+
         System.out.print("這是@test的第二个注解，case2！");
+         Assert.assertEquals(0,1);
      }
      @AfterTest
     public  void afterTest(){
